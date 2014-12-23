@@ -63,5 +63,5 @@ Connecting to the server
 If you have deployed your server locally, you can check ssh connection setup is working propertly by running
 
 ```
-ssh sync-server@localhost -p 2222
+ssh cdx-sync@localhost -p 2222
 ```
