@@ -3,4 +3,4 @@ Protocol 2
 HostKey /etc/ssh/keys/ssh_host_rsa_key
 PermitRootLogin no
 PasswordAuthentication no
-LogLevel INFO
+LogLevel DEBUG
