@@ -31,6 +31,10 @@ Optionally the *home* directory can be changed passing the *SYNC_HOME* variable:
 
 `make testrun SYNC_HOME=/path/to/home`.
 
+Also, the *keys* directory can be changed by setting the *SYNC_KEYS* variable:
+
+`make testrun SYNC_KEYS=/path/to/keys`.
+
 Execute from Docker image directly
 ----------------------------------
 
