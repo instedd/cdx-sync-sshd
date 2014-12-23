@@ -55,3 +55,13 @@ Ports forwarding - Mac Only
 ---------------------------
 
 If you are running from a Mac with ```boot2docker``` ports exported by docker will not be exposed to you machine by default. Check [this issue](https://github.com/docker/docker/issues/4007). 
+
+
+Connecting to the server
+------------------------
+
+If you have deployed your server locally, you can check ssh connection setup is working propertly by running
+
+```
+ssh sync-server@localhost -p 2222
+```
