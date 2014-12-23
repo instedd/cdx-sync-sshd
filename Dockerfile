@@ -16,7 +16,8 @@ ADD files/rrsync /usr/local/bin/rrsync
 RUN adduser --disabled-password --gecos "" cdx-sync
 
 VOLUME /etc/ssh/keys
-VOLUME /home/cdx-sync
+VOLUME /home/cdx-sync/sync
+VOLUME /home/cdx-sync/.ssh
 
 EXPOSE 22
 
