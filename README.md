@@ -50,3 +50,8 @@ $ docker run -it --rm \
     cdx-sync-sshd
 ```
 
+
+Ports forwarding - Mac Only
+---------------------------
+
+If you are running from a Mac with ```boot2docker``` ports exported by docker will not be exposed to you machine by default. Check [this issue](https://github.com/docker/docker/issues/4007). 
