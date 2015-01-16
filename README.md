@@ -47,7 +47,7 @@ $ docker run -it --rm \
     -p 2222:22 \
     -v /path/to/keys:/etc/ssh/keys \
     -v /path/to/home:/home/cdx-sync \
-    cdx-sync-sshd
+    instedd/cdx-sync-sshd
 ```
 
 
