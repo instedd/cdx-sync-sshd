@@ -13,7 +13,11 @@ ADD files/sshd.sh /usr/local/bin/sshd.sh
 ADD files/rrsync /usr/local/bin/rrsync
 
 # Create user
-RUN adduser --disabled-password --gecos "" cdx-sync
+RUN adduser --uid 9999 --disabled-password --gecos "" cdx-sync
+RUN mkdir /home/cdx-sync/sync
+RUN mkdir /home/cdx-sync/.ssh
+RUN chown cdx-sync:cdx-sync /home/cdx-sync/sync
+RUN chown cdx-sync:cdx-sync /home/cdx-sync/.ssh
 
 VOLUME /etc/ssh/keys
 VOLUME /home/cdx-sync/sync
