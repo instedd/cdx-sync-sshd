@@ -1,4 +1,4 @@
-TAG_NAME=cdx-sync-sshd
+TAG_NAME=instedd/cdx-sync-sshd
 
 image:
 	docker build --rm -t $(TAG_NAME) .
