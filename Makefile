@@ -9,5 +9,5 @@ testrun:
 		--name cdx-sync-sshd \
 		-v $(if $(SYNC_KEYS),$(SYNC_KEYS),`pwd`/keys):/etc/ssh/keys \
 		-v $(if $(SYNC_SSH), $(SYNC_SSH), `pwd`/ssh):/home/cdx-sync/.ssh \
-		-v $(if $(SYNC_HOME),$(SYNC_HOME),`pwd`/home):/home/cdx-sync/sync \
+		-v $(if $(SYNC_HOME),$(SYNC_HOME),`pwd`/home):/home/cdx-sync/tmp/sync \
 		$(TAG_NAME)

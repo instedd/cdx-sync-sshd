@@ -13,7 +13,7 @@ if [ $? -eq 0 ]; then
   fi
 else
   adduser --uid $SYNC_UID --disabled-password --gecos "" cdx-sync
-  mkdir -p /home/cdx-sync/sync /home/cdx-sync/.ssh
+  mkdir -p /home/cdx-sync/tmp/sync /home/cdx-sync/.ssh
   chown cdx-sync:cdx-sync -R /home/cdx-sync
 fi
 
