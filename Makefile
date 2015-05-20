@@ -1,7 +1,14 @@
-TAG_NAME=instedd/cdx-sync-sshd
+TAG_NAME  := instedd/cdx-sync-sshd
+VERSION   := $(shell git describe 2>/dev/null || echo "`date -u \"+%Y%m%d.%H%M%S\"`-`git describe --always`")
 
-image:
-	docker build --rm -t $(TAG_NAME) .
+docker:
+	echo $(VERSION) > VERSION
+	docker build --tag $(TAG_NAME):$(VERSION) .
+	docker build --tag $(TAG_NAME) .
+
+docker-push: docker
+	docker push $(TAG_NAME):$(VERSION)
+	docker push $(TAG_NAME)
 
 testrun:
 	docker run -it --rm \
