@@ -11,7 +11,7 @@ The user _cdx-sync_ is preconfigured and it's expected that the remote client wi
 Build the image
 ---------------
 
-To build the Docker image you can use `docker build .` directly or run `make` which will create the image and tag it with the *cdx-sync-sshd* name.
+To build the Docker image you can use `docker build .` directly or run `make` which will create the image and tag it with the *instedd/cdx-sync-sshd* name.
 
 Automated build
 ---------------
@@ -22,18 +22,8 @@ There is a configured repository in [Docker Hub](https://registry.hub.docker.com
 Run from the working copy
 -------------------------
 
-Once the image is built, there is another Makefile target to run a test server. It can started running `make testrun`. Two directories will be created in the host machine and mapped to the volumes in the container:
+Docker compose configuration is included. To build and start the container run: `docker-compose up` on the project directory.
 
-  * *keys*: The first time the container is run it will generate the keypair and store it in this directory
-  * *home*: This will be the home directory of the _cdx-sync_ user
-
-Optionally the *home* directory can be changed passing the *SYNC_HOME* variable:
-
-`make testrun SYNC_HOME=/path/to/home`.
-
-Also, the *keys* directory can be changed by setting the *SYNC_KEYS* variable:
-
-`make testrun SYNC_KEYS=/path/to/keys`.
 
 Execute from Docker image directly
 ----------------------------------
@@ -55,7 +45,7 @@ $ docker run -it --rm \
 Ports forwarding - Mac Only
 ---------------------------
 
-If you are running from a Mac with ```boot2docker``` ports exported by docker will not be exposed to you machine by default. Check [this issue](https://github.com/docker/docker/issues/4007). 
+If you are running from a Mac with ```boot2docker``` ports exported by docker will not be exposed to you machine by default. Check [this issue](https://github.com/docker/docker/issues/4007).
 
 
 Connecting to the server

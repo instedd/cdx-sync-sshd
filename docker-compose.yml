@@ -1,0 +1,8 @@
+sshd:
+  build: .
+  volumes:
+    - './keys:/etc/ssh/keys'
+    - './ssh:/home/cdx-sync/.ssh'
+    - './home:/home/cdx-sync/tmp/sync'
+  ports:
+    - '2222:22'
