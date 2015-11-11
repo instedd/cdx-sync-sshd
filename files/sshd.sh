@@ -17,4 +17,4 @@ else
   chown cdx-sync:cdx-sync -R /home/cdx-sync
 fi
 
-/usr/sbin/sshd -D -e
+exec /usr/sbin/sshd -D -e 2>&1

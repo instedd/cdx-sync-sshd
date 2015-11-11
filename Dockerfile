@@ -20,4 +20,4 @@ VOLUME /home/cdx-sync/.ssh
 
 EXPOSE 22
 
-CMD /usr/local/bin/sshd.sh
+CMD ["/usr/local/bin/sshd.sh"]
